@@ -1,0 +1,51 @@
+TypeSctipt
+	安装
+		1.安装node环境 下载地址:https://nodejs.org/en/
+		2.安装的时候  安装在默认盘符 
+		3.在终端 输入 npm install -g typescript
+		4.切换到 项目文件根目录 执行 tsc main.ts
+	特点
+		可选类型
+		enum
+		类
+		接口
+		arrow函数
+	简介：
+		1.TypeSctipt 类似强类型的语言 
+		2.会帮咱们 识别 赋值 类型错误的 值
+	基本数据类型
+		boolean
+		number
+		string
+		Array：指定 变量的 数据类型
+			类型[] var list:number[] = [1,2,55,34];
+			Array<类型> var list:Array<number> = [33,22,66];
+		Tuple 元组：
+			类似数组 在知道 数组里面 元素数量以及 元素的类型的时候 
+			var 元组的名字:[数据类型,数据类型,...] = [具体的元素,具体的元素]
+		Enum 枚举
+			enum 枚举的名字 {
+				变量,
+				变量2
+			}
+			默认是从0 开始  自动增长的
+			如果 在某个位置 截断  会在截断的位置  继续自动增长
+		Any：任意类型
+		Void：空 
+	接口
+		简介：	
+			声明 接口（用于声明的位置  让外部知道 自己的内容）
+			实现 具体实现代码功能的地方
+		interface
+		extends扩展接口
+	类
+		class
+		实现接口 implements
+		继承 extends
+		修饰符
+			public:公共的 任何人 都可以访问这个属性
+			private:私有的 只能是 本类中 可以访问 
+			protected:受保护的  只能在 本类 或者  子类 中 被访问 
+		abstract：抽象类
+	static：静态方法、变量的修饰词
+
