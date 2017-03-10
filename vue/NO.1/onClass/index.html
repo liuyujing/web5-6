@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+
+
+<div id="container">
+
+    <p>{{1+1}}</p>
+    <!--<p>{{person}}</p>-->
+    <ul>
+        <li>{{person.name}}</li>
+        <li>{{person.age}}</li>
+    </ul>
+
+    <ul>
+        <li>{{student.name}}</li>
+        <li>{{student.age}}</li>
+    </ul>
+
+    <!--指令-->
+    <!--v-text:用来显示文本-->
+    <ul>
+        <li>
+            <p>{{person.name}}</p>
+            <p v-text="person.age"></p>
+        </li>
+    </ul>
+
+    <div v-text="infoHTML"></div>
+    <div v-html="infoHTML"></div>
+
+    <p>
+        <input type="text" v-model="message">
+    </p>
+    <p v-text="message"></p>
+
+    <ul>
+        <li v-for="obj in persons">
+            <p v-text="obj.name"></p>
+            <p v-text="obj.age"></p>
+        </li>
+    </ul>
+
+</div>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

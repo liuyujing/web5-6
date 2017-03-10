@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .class1 {
+            color: #ff1838;
+        }
+
+        .class2 {
+            background-color: #c5c5c5;
+        }
+
+    </style>
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <div>
+        <p v-for="info in list" v-text="info.name" @click="checkStudy(info)" :class="{class1:isChoose}"></p>
+    </div>
+
+</div>
+
+<script src="../js/app2.js"></script>
+</body>
+</html>

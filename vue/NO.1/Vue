@@ -1,0 +1,48 @@
+Vue.js：view
+	介绍
+		MVC、MVVM、MV*
+		M V VM:
+			M:数据模型
+			V:视图
+			VM:视图模型的连接体
+		轻量级->不是使用某个框 还必须使用他其他相关的框架
+		重量级->当使用一个框架的时候  就必须连带的 使用 相关其他框架 （否则就是用不了 这个框架）
+	简介：
+		1. Vue.js是数据驱动的 不需手动操作DOM
+		2. Vue是一个轻量级的框架 灵活 方便
+		3. Vue的核心 是ViewModel 使用MVVM这种框架
+	表达式{{表达式、变量}}
+		需要声明vue的作用区域
+		new Vue()
+		4. Vue可以实现 数据的双向绑定->视图上的数据发送改变 数据模型中的 数据 也会同时发生改变  反之相同
+	常用指令
+		v-text：用于显示文本
+		v-html：用于显示HTML
+		v-model：可以绑定 视图上面的数据模型(数据模型 需要在data中 被初始化)
+		v-for:用于遍历数组 v-for="value in array" ->写在希望重复的元素上面
+		v-if:
+		v-else:
+		v-else-if:
+		v-show:根据条件来显示
+		v-bind：用于绑定属性  简写 :class :src :herf ...
+		v-on: 用于绑定事件 简写@事件名 
+		
+	构建应用
+		new Vue({})
+		属性
+			el:字符串（Vue2.0之后 只可以传id）
+			data:对象 -> 是可以 绑定到 html中的 数据模型
+			methods: 用于写 函数 方法的 属性
+	自定义组建components
+		props
+		template
+		data:必须是函数
+	自定义命令directive
+	路由：http://router.vuejs.org/zh-cn/
+
+	使用步骤：
+		1.引入Vue.js文件
+		2.创建Vue对象 来声明 Vue的作用区域
+			参数：{}对象类型
+				el:"选择器的名字（id body）2.0之后不再可以使用html\body"
+		3.尽情使用{{1+1}}

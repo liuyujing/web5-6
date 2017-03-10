@@ -1,0 +1,26 @@
+Vue-2
+	:class 
+		1.可以通过变量的方式 设置 元素的样式 :class="type"
+		2.可以通过 数组的方式 设置元素的 多个类选择器 :class="[type,ucaiType]"
+		3.可以通过 一个bool值 来设置 类选择器（不是变量）是否被选择上 :class="{class1:ischoose}"
+	methods
+	watch
+		数据名
+			handler：函数 
+				新值 旧值
+			deep：深复制 浅复制
+	components
+		组件名：组建
+		组建
+			props：对应的值 是一个数组
+			template：HTML的模板内容
+			data：对应的是函数 
+	路由
+		库：http://router.vuejs.org/zh-cn/
+		使用
+			<router-link to=""></router-link>
+			<router-view></router-view>
+			const routes = [
+  					{ path: '/foo', component: Foo },
+  					{ path: '/bar', component: Bar }
+				]

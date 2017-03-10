@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .color-type {
+            width: 200px;
+            height: 200px;
+            background-color: #ff0039;
+        }
+        .color-default {
+            width: 100px;
+            height: 100px;
+            background-color: #4987ff;
+        }
+    </style>
+
+    <script src="../lib/vue.js"></script>
+</head>
+<body>
+
+
+<div id="container">
+
+    <!--<span v-if="isBoy == true">男孩</span>-->
+    <span v-if="isBoy">男孩</span>
+    <span v-else>女孩</span>
+
+    <span v-if="type==1">早晨</span>
+    <span v-else-if="type==2">中午</span>
+    <span v-else>晚上</span>
+
+    <p v-show="isShow">312456789</p>
+
+    <input type="text" v-model="colorOfKinds">
+    <p v-text="colorOfKinds"></p>
+
+    <!-- v-bind:class -> 缩写 :class-->
+    <div :class="colorOfKinds"></div>
+
+    <input type="text" v-model="imagePath">
+    <img :src="imagePath" alt="">
+
+    <!--v-on:click -> 缩写 @click -->
+    <p @click="waring">点击</p>
+
+
+    <ul>
+        <li v-for="obj in list" @click="showMessage(obj)">
+            <h2 v-text="obj.name"></h2>
+            <p v-text="obj.age"></p>
+        </li>
+    </ul>
+
+</div>
+
+<script src="../js/app4.js"></script>
+</body>
+</html>

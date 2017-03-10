@@ -46,6 +46,5 @@ TypeSctipt
 			public:公共的 任何人 都可以访问这个属性
 			private:私有的 只能是 本类中 可以访问 
 			protected:受保护的  只能在 本类 或者  子类 中 被访问 
-		abstract：抽象类
+		abstract：抽象类 不可以被实例化  是一个更加抽象的存在
 	static：静态方法、变量的修饰词
-

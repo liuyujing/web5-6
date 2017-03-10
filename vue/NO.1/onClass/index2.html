@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="lib/vue.js"></script>
+</head>
+<body>
+
+<div id="container">
+    
+    <ul>
+        <li v-for="obj in list">
+            <ul>
+                <li v-for="item in obj.data">
+                    <h3 v-text="item.name"></h3>
+                    <p v-text="item.age"></p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+
+<script src="js/app2.js"></script>
+</body>
+</html>
