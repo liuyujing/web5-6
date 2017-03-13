@@ -1,0 +1,10 @@
+bower 包管理插件
+	安装：
+		1.下载安装node https://nodejs.org/en/ 注意：安装到默认盘符（不安装到默认盘符 不识别npm命令）
+		2.安装git 下载git的安装包  安装到默认盘符
+		3.安装bower： npm i -g bower
+	使用：
+		1.搜索需要的库 bower search 库名
+		2.安装：bower install 库名
+		3.卸载 bower uninstall 库名
+

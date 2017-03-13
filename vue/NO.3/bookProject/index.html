@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .choose {
+            color: #c50409;
+        }
+    </style>
+
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <add-view :book="book" @add="addBookToList"></add-view>
+    <list-view :datas="list" @change="changeState"></list-view>
+
+</div>
+
+
+<script src="js/DataManager.js"></script>
+<script src="js/models.js"></script>
+<script src="js/componts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
+
+<!--
+随机抽选回答问题的 项目
+要求：
+1.初始数组：抽完所有同学   需要重置随机抽选回答问题的 项目
+要求：
+1.初始数组：抽完所有同学   需要重置数组
+2.区分权限
+    输入帐号密码 账户类型（1:老师 2:学生）
+    学生 不能添加 人名
+    老师：可以添加人名
+3.关闭浏览器  下次还可以使用数组
+2.区分权限
+    输入帐号密码 账户类型（1:老师 2:学生）
+    学生 不能添加 人名
+    老师：可以添加人名
+3.关闭浏览器  下次还可以使用
+-->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .choose {
+            color: #c50409;
+        }
+    </style>
+
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <add-book :book="book" @add="addBookToList"></add-book>
+    <book-list :datas="list" @change="changeState"></book-list>
+
+    <!--<p v-for="item in list" v-text="item"></p>-->
+</div>
+
+<script src="js/DataManager.js"></script>
+<script src="js/models.js"></script>
+<script src="js/components.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
