@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="lib/mintStyle.css">
+
+    <script src="lib/vue.js"></script>
+    <script src="lib/vue-router.js"></script>
+    <script src="lib/mint.js"></script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <mt-tabbar>
+        <mt-tab-item id="外卖">
+            <img slot="icon" src="assets/tab_home.png">
+            <router-link to="/">外卖</router-link>
+        </mt-tab-item>
+        <mt-tab-item id="订单">
+            <img slot="icon" src="assets/tab_home.png">
+            <router-link to="/order">订单</router-link>
+        </mt-tab-item>
+        <mt-tab-item id="发现">
+            <img slot="icon" src="assets/tab_home.png">
+            <router-link to="/find">发现</router-link>
+        </mt-tab-item>
+        <mt-tab-item id="我的">
+                <img slot="icon" src="assets/tab_home.png">我的
+        </mt-tab-item>
+    </mt-tabbar>
+
+    <!--显示 路由指向组件中的内容-->
+    <router-view></router-view>
+
+</div>
+
+<script src="js/home.js"></script>
+<script src="js/find.js"></script>
+<script src="js/order.js"></script>
+<script src="js/setting.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

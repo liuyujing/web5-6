@@ -16,6 +16,13 @@
 
 <div id="app">
 
+    <xie-zai-html @move="fun" :myprop="message"></xie-zai-html>
+
+    <p v-text="message"></p>
+    {{message}}
+
+    <p @click="fun">调用函数</p>
+
     <add-view :book="book" @add="addBookToList"></add-view>
     <list-view :datas="list" @change="changeState"></list-view>
 

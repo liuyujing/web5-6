@@ -1,0 +1,16 @@
+vue-router
+	标签（组件）
+		router-link:用于跳转连接
+		router-view:用于显示 路由中内容的标签
+	使用：
+		1.引入：
+			1.引入vue
+			2.再引入vue-router
+		2.var router = new VueRouter({})
+			参数(object)
+				routes:[路由配置的对象,路由配置的对象]数组
+					路由配置的对象:Object
+						path:路径
+						component:组件
+		3.在 new Vue({router:router})
+

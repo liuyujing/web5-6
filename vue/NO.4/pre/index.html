@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui@1/lib/style.css">
+
+
+    <script src="bower_components/vue/dist/vue.js"></script>
+    <script src="bower_components/vue-router/dist/vue-router.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+
+    <mt-tabbar v-model="selected">
+        <mt-tab-item id="外卖">
+
+            <router-link to="/home">外卖</router-link>
+        </mt-tab-item>
+        <mt-tab-item id="订单">
+            <router-link to="/find">订单</router-link>
+
+        </mt-tab-item>
+        <mt-tab-item id="发现">
+
+            发现
+        </mt-tab-item>
+        <mt-tab-item id="我的">
+
+            我的
+        </mt-tab-item>
+    </mt-tabbar>
+
+    <router-view></router-view>
+
+</div>
+
+<script src="js/components.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
