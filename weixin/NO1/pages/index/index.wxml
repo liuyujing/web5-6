@@ -1,0 +1,7 @@
+<!--pages/index/index.wxml-->
+<import src="../views/mm.wxml"/>
+<view>
+{{text}}
+</view>
+<button bindtap="changeText"> Change normal data </button>
+<template is="A"/>

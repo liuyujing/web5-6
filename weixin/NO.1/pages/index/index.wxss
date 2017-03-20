@@ -1,0 +1,76 @@
+.container {
+    background-color: #F2f2f2;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx 0;
+    align-items: center;
+    background: #0092ff;
+}
+
+.userinfo-avatar {
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    color: #333;
+}
+
+.weui_cell {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+    background-color: white;
+}
+
+.weui_cell_hd image {
+    width: 100%;
+    height: 20px;
+    vertical-align: -2px;
+}
+
+.tv_cell_left {
+    position: absolute;
+    font-size: 30rpx;
+    color: #333;
+    left: 20rpx;
+}
+
+.tv_cell_right {
+    position: absolute;
+    font-size: 28rpx;
+    color: #999999;
+    right: 50rpx;
+}
+
+.iv-arrow {
+    position: absolute;
+    right: 30rpx;
+    border-top: 2rpx solid #c7c7c7;
+    border-right: 2rpx solid #c7c7c7;
+    width: 16rpx;
+    height: 16rpx;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.v_below {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tv_server_time {
+    font-size: 28rpx;
+    color: #999999;
+    margin-top: 20rpx;
+}

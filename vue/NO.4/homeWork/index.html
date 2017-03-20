@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <script src="bower_components/vue/dist/vue.js"></script>
+    <script src="bower_components/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <!--
+    userModel 组件里面的属性
+    user 是Vue里面的属性
+    : v-bind缩写
+    可以把 userModel 和 user 绑定到一起
+    他俩就是同一个 属性了
+    -->
+    <login :usermodel="user" @login="login"></login>
+
+    <rand-person :result="result" @start="start"></rand-person>
+
+    <add-person :user="user" @add="addPerson" :curlist="curPersons"></add-person>
+
+
+
+    <!--<ul>-->
+        <!--<li><router-link to="/">抽选</router-link></li>-->
+        <!--<li><router-link to="/add">添加</router-link></li>-->
+        <!--<li><router-link to="/login">登录</router-link></li>-->
+    <!--</ul>-->
+
+    <!--<router-view></router-view>-->
+
+</div>
+
+<script src="js/Models.js"></script>
+<script src="js/DataManager.js"></script>
+<script src="js/login.js"></script>
+<script src="js/addPerson.js"></script>
+<script src="js/randPerson.js"></script>
+<script src="js/router.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

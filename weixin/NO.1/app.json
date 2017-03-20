@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "backgroundColor": "#ffffff",
+        "navigationBarBackgroundColor": "#0092ff",
+        "navigationBarTitleText": "滴答宝",
+        "navigationBarTextStyle": "white"
+    }
+}

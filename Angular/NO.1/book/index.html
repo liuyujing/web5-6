@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!--指定应用程序的 入口模块-->
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="lib/angular.js"></script>
+</head>
+<body ng-controller="homeController">
+
+<p>
+    <label for="title-input">标题:</label>
+    <input id="title-input" type="text" ng-model="book.title">
+</p>
+
+<p>
+    <label for="price-input">价格:</label>
+    <input id="price-input" type="number" ng-model="book.price">
+</p>
+
+<button ng-click="toSave(book)">保存</button>
+
+
+<script src="js/controllers.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

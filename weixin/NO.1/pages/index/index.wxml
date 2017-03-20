@@ -1,0 +1,22 @@
+<toast hidden="{{toastHidden}}" duration="1000" bindchange="toastChange">{{toastContent}}</toast>
+<view class="container">
+    <view bindtap="headTap" class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <block wx:for-index="index" wx:for="{{userListInfo}}">
+        <view data-index="{{index}}" bindtap="cellItemClick" class="weui_cell" style="margin-top:{{item.margin}};">
+            <view wx:if="false" class="weui_cell_hd">
+                <image src="{{item.icon}}"></image>
+            </view>
+            <text class="tv_cell_left"> {{item.leftItem}} </text>
+            <text wx:if="{{item.rightItem}} == null" class="tv_cell_right">{{item.rightItem}}</text>
+            <view wx:if="{{item.showArrow}}" class="iv-arrow"></view>
+        </view>
+    </block>
+    <view class="v_below">
+        <text class="tv_server_time">客服电话 400-686-1179</text>
+        <text class="tv_server_time">服务时间 10:00~22:00</text>
+        <text class="tv_server_time">官方邮箱 dida@shuidihuzhu.com</text>
+    </view>
+</view>
