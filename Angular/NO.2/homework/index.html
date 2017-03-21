@@ -1,0 +1,60 @@
+
+<!--
+
+发布新闻：保存到localstrage里面
+    图片：绝对路径的图片  标题 详细信息
+浏览新闻：读取localstrage里面的数据
+
+-->
+
+
+<!DOCTYPE html>
+
+<!--指定应用程序的入口模块-->
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="res/angular.js"></script>
+</head>
+<body>
+
+
+<!--发布新闻的页面-->
+<div ng-controller="postNewsController">
+
+    <p>图片:<input type="text" ng-model="news.image"></p>
+    <p>标题:<input type="text" ng-model="news.title"></p>
+    <p>详细信息:<input type="text" ng-model="news.des"></p>
+
+    <button ng-click="toPost(news)">发布</button>
+</div>
+
+<!--读取新闻的页面-->
+<div ng-controller="readNewsController">
+
+
+    <p>{{num}}</p>
+
+    <button ng-click="update()">点击更新</button>
+
+    <ul>
+        <li ng-repeat="news in list track by $index">
+            <img ng-src="{{news.imagePath}}" alt="">
+            <h3 ng-bind="news.title"></h3>
+            <p ng-bind="news.des"></p>
+            <hr>
+        </li>
+    </ul>
+
+
+</div>
+
+
+<script src="js/Services.js"></script>
+<script src="js/News.js"></script>
+<script src="js/Controllers.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

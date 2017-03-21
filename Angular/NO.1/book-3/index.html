@@ -23,7 +23,9 @@
 <button ng-click="toSave(book)">保存</button>
 
 <!--遍历 保存的数据-->
-<div ng-repeat="item in books">
+<!--track by 可以解决在遍历数组的时候  出现重复内容 会报错的情况 （angular在遍历数组的时候 会给每一个内容加一个$$hashkey，用于区分是不是重复的内容 ） 可以通过一个唯一的标识  让angular查看是不是 有重复的 track by item.id track by $index-->
+<!--需要注意 ：如果对数组进行排序  track by需要写在排序的后面-->
+<div ng-repeat="item in books track by $index">
     <h1 ng-bind="item.title"></h1>
     <p ng-bind="item.price"></p>
     <hr>

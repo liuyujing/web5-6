@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="res/angular.js"></script>
+    <script src="res/angular-route.js"></script>
+</head>
+<body>
+
+<!--
+ajax：异步的javaScrit和XML
+不是用于请求数据
+不刷新更新页面
+不允许 从别的 地方 去加载 其他文件 -> 只要从别的地方去加载 就提示跨域
+-->
+
+<!--显示 每一个路由中 内容的 标签-->
+<ng-view></ng-view>
+<ul>
+    <!--通过href 跳转到  指定的 路由位置 -->
+    <li><a href="#/home">首页</a></li>
+    <li><a href="#/find">发现</a></li>
+</ul>
+
+<script src="js/app.js"></script>
+</body>
+</html>

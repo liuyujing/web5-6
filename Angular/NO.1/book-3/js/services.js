@@ -16,6 +16,8 @@
         this.save = function (key,value) {
             localStorage.setItem(key,value?JSON.stringify(value):null);
         };
+
+
         //读取
         this.read = function (key) {
             var result = localStorage.getItem(key);

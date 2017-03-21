@@ -1,0 +1,20 @@
+angular内置服务
+	$scope:控制器的作用域
+	$rootScope:根作用域 可以跨控制器使用 只要定义在$rootScope上面的  所有控制器 都可以访问到
+	$http：类似于jquery里面的ajax 用于数据请求 不需要在使用$apply去传递数据模型里面的值
+
+路由:可以通过一个接口 分发出来 多个线路
+	1.angular中自己的路由 ngRoute
+		> 注入ngRoute模块
+		> 配置应用程序的路由（config()）：函数
+			$routeProvider
+		> 配置每一个路由
+			$routeProvider.when()
+				> 路径 路由分支的路径
+				> 对象 路由分支的配置信息
+				每一个when 都是路由的 一个分支条件
+				可以多个条件
+			$routeProvider.otherwise()
+				所有条件都不满足 就会执行默认的这个条件
+
+	2.第三方的路由 ui-router
