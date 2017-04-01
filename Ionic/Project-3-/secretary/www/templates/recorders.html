@@ -1,0 +1,29 @@
+
+<ion-view title="记录">
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-edit button-clear" ui-sref="tabs.write"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item ng-repeat="info in recoders">
+        <div class="energized item-button-right item-icon-left">
+          <i class="icon ion-mic-a"></i>
+          <h2 ng-bind="info.title"></h2>
+          <p ng-bind="info.des"></p>
+          <button class="button button-positive">dfd</button>
+        </div>
+        <div class="loc"><a>riqi</a><a>weizhi</a></div>
+        <ion-option-button class="button-assertive icon ion-edit"></ion-option-button>
+      </ion-item>
+
+
+    </ion-list>
+
+
+
+  </ion-content>
+  <button class="right-bottom">change</button>
+</ion-view>

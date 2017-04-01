@@ -1,0 +1,34 @@
+
+<ion-view title="记录">
+  <ion-nav-buttons side="right">
+
+
+    <button class="button icon ion-edit button-clear" ui-sref="tabs.write"></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <ion-refresher
+      pulling-text="正在刷新..."
+      on-refresh="reload()">
+    </ion-refresher>
+
+    <ion-list show-delete="shouldShowDelete">
+      <ion-item ng-repeat="info in recorders track by $index" class="item-icon-left item-button-right">
+
+        <span class="icon ion-ios-circle-filled assertive"></span>
+        <h2 ng-bind="info.title"></h2>
+        <p ng-bind="info.des"></p>
+        <button class="button button-clear button-energized" >完成</button>
+
+        <p ng-bind="info.address" ng-hide="info.address=='定位'" class="recorder-width"></p>
+        <p ng-bind="info.alert_time" class="recorder-width" ng-show="info.alert_time"></p>
+
+        <ion-option-button class="button-assertive" ng-click="deleteItem(info)">删除</ion-option-button>
+
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+</ion-view>

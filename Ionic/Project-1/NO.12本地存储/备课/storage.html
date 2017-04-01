@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .logined {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<form>
+    <div>
+        <label for="username">帐号:</label>
+        <input id="username" type="text">
+    </div>
+    <div>
+        <label for="password">密码:</label>
+        <input id="password" type="text">
+    </div>
+    <button>登录</button>
+</form>
+
+<p class="logined">已登录</p>
+<button class="clearLogin">清除登录信息</button>
+<button class="clearAll">清除所有信息</button>
+<button class="getFromIndex">根据键获取</button>
+
+<a href="websql.html">websql</a>
+
+<script>
+    (function () {
+        var form = document.querySelector("form");
+        var showNameView = document.querySelector(".logined");
+        var nameInput = document.querySelector("#username");
+        var passwordInput = document.querySelector("#password");
+        var loginButton = document.querySelector("form button");
+        var name = sessionStorage.getItem("name");
+
+        if (name){
+            form.style.display = "none";
+            showNameView.style.display = "block";
+            showNameView.textContent = "用户名:"+name;
+        }else {
+            loginButton.onclick = function (e) {
+                e.preventDefault();
+                sessionStorage.setItem("name",nameInput.value);
+                sessionStorage.setItem("password",passwordInput.value);
+            }
+        }
+
+
+        var clearLogin = document.querySelector(".clearLogin");
+        var clearAll = document.querySelector(".clearAll");
+        var getFromIndex = document.querySelector(".getFromIndex");
+
+        clearLogin.onclick = function () {
+            sessionStorage.removeItem("name");
+        };
+        clearAll.onclick = function () {
+            sessionStorage.clear();
+        };
+        getFromIndex.onclick = function () {
+            for (var i=0;i<sessionStorage.length;i++){
+                console.log(sessionStorage.getItem(sessionStorage.key(i)));
+            }
+        }
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" manifest="Manifest.appcache">
+<!--<html lang="en">-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .login-container {
+            width: 400px;
+            height: 300px;
+            background-color: #cccccc;
+            position: fixed;
+            left: 30%;
+            top: 30%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .login-container div {
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <section>
+        <a>登录</a>
+    </section>
+    <nav>
+        <ul class="top-nav">
+            <li>1</li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<section class="contaner">
+
+    <h1>记账薄</h1>
+
+    <section>
+        <label for="data-name">名字:</label>
+        <input type="text" id="data-name">
+    </section>
+
+    <section>
+        <label for="data-des">描述:</label>
+        <textarea id="data-des"></textarea>
+    </section>
+
+    <section>
+        <label for="data-price">价格:</label>
+        <input type="text" id="data-price">
+    </section>
+
+    <button class="save">保存</button>
+
+    <section class="history-data-listview">
+
+    </section>
+</section>
+
+
+<script src="main.js"></script>
+
+<script src="DataBaseTool.js"></script>
+<script src="TallyDBManager.js"></script>
+<script src="webDB.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+
+.recoder-icon {
+  background-image: url("../img/icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.recoder-selected-icon {
+  background-image: url("../img/selected.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}

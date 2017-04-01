@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>ionic-CSS</title>
+
+
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+</head>
+<body>
+
+<!--<div class="bar bar-header bar-balanced"></div>-->
+
+<div class="bar bar-header">
+  <button class="button button-icon icon ion-navicon"></button>
+  <div class="h1 title">Header Buttons</div>
+  <button class="button button-clear button-positive">Edit</button>
+</div>
+
+<div class="bar bar-subheader"></div>
+
+<ion-content class="has-header has-subheader has-footer">
+
+  <div class="button-bar">
+    <button class="button">iOS</button>
+    <button class="button">Android</button>
+    <button class="button">WinPhone</button>
+  </div>
+
+  <button class="button button-block button-royal">按钮</button>
+  <button class="button button-outline button-royal">按钮</button>
+  <button class="button button-clear  button-royal">按钮</button>
+
+  <ul class="list" ng-init="list = ['111','232','dsgdfg','y56fg','y54ydgsdf']">
+    <li class="item" ng-repeat="info in list" ng-bind="info"></li>
+  </ul>
+
+
+  <div class="list" ng-init="list = ['111','232','dsgdfg','y56fg','y54ydgsdf']">
+    <a href="#" class="item" ng-repeat="info in list" ng-bind="info"></a>
+  </div>
+
+  <!--<ion-list>-->
+    <!--<ion-item>12121</ion-item>-->
+  <!--</ion-list>-->
+
+  <div class="list list-inset">
+    <a href="#" class="item item-thumbnail-left">
+      <img src="http://ionicframework.com/img/docs/blue-album.jpg" alt="">
+      <h1>新闻</h1>
+      <p>内容</p>
+    </a>
+  </div>
+
+
+  <div class="list card">
+    <a href="#" class="item">11111</a>
+  </div>
+
+
+  <div class="list card">
+
+    <div class="item item-avatar">
+      <img src="http://ionicframework.com/img/docs/blue-album.jpg">
+      <h2>Marty McFly</h2>
+      <p>November 05, 1955</p>
+    </div>
+
+    <div class="item item-body">
+      <img class="full-image" src="http://ionicframework.com/img/docs/blue-album.jpg">
+      <p>
+        This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+        the content is from a card-body consisting of an image and paragraph text. The footer
+        consists of tabs, icons aligned left, within the card-footer.
+      </p>
+      <p>
+        <a href="#" class="subdued">1 Like</a>
+        <a href="#" class="subdued">5 Comments</a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="list">
+    <label class="item item-input">
+      <input type="text" placeholder="First Name">
+    </label>
+    <label class="item item-input">
+      <input type="text" placeholder="Last Name">
+    </label>
+    <label class="item item-input">
+      <textarea placeholder="Comments"></textarea>
+    </label>
+  </div>
+
+  <button class="button button-full button-balanced">提交</button>
+
+
+  <div class="bar item-input-inset">
+    <label class="item-input-wrapper">
+      <span class="icon ion-ios-search placeholder-icon"></span>
+      <input type="text">
+    </label>
+    <button class="button">取消</button>
+  </div>
+
+  <label class="toggle toggle-dark">
+    <input type="checkbox">
+    <div class="track">
+      <div class="handle"></div>
+    </div>
+  </label>
+
+
+  <ion-list>
+
+    <ion-checkbox>Red</ion-checkbox>
+    <ion-checkbox>Yellow</ion-checkbox>
+    <ion-checkbox>Pink</ion-checkbox>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-radio>Red</ion-radio>
+    <ion-radio>Yellow</ion-radio>
+    <ion-radio>Pink</ion-radio>
+
+  </ion-list>
+
+  <div class="list">
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Lightsaber
+      </div>
+      <select>
+        <option>Blue</option>
+        <option selected>Green</option>
+        <option>Red</option>
+      </select>
+    </label>
+
+  </div>
+
+
+  <!--<div class="bar bar-footer bar-balanced"></div>-->
+
+
+
+
+  <div class="row">
+    <div class="col-33">
+      <button class="button button-block button-balanced"></button>
+    </div>
+    <div class="col-33">
+      <button class="button button-block button-balanced"></button>
+    </div>
+    <div class="col-33">
+      <button class="button button-block button-balanced"></button>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-tabs class="tabs tabs-icon-top tabs-background-balanced tabs-bottom">
+  <ion-tab-item class="tab-item">
+    <span class="icon ion-home"></span>
+    首页
+  </ion-tab-item>
+  <ion-tab-item class="tab-item">
+    <span class="icon ion-star"></span>
+    发现
+  </ion-tab-item>
+  <ion-tab-item class="tab-item">
+    <span class="icon ion-gear-a"></span>
+    设置
+  </ion-tab-item>
+</ion-tabs>
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

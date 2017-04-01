@@ -1,0 +1,10 @@
+JavaScript继承：
+	JavaScript：通过原型 实现的 继承
+	所有对象的 原型 都是 Object
+	Array  -> Object
+	Person -> Object
+	Hero -> Person -> Object
+
+	function Person (){}
+
+	function Hero (){}  Hero.propoty = new Person();

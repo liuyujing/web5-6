@@ -1,0 +1,224 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData gulp
+20 silly mapToRegistry name gulp
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry http://registry.cnpmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'gulp',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   escapedName: 'gulp',
+23 silly mapToRegistry   name: 'gulp',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri http://registry.cnpmjs.org/gulp
+25 silly fetchNamedPackageData gulp-sass
+26 silly mapToRegistry name gulp-sass
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry http://registry.cnpmjs.org/
+29 silly mapToRegistry data Result {
+29 silly mapToRegistry   raw: 'gulp-sass',
+29 silly mapToRegistry   scope: null,
+29 silly mapToRegistry   escapedName: 'gulp-sass',
+29 silly mapToRegistry   name: 'gulp-sass',
+29 silly mapToRegistry   rawSpec: '',
+29 silly mapToRegistry   spec: 'latest',
+29 silly mapToRegistry   type: 'tag' }
+30 silly mapToRegistry uri http://registry.cnpmjs.org/gulp-sass
+31 silly fetchNamedPackageData gulp-concat
+32 silly mapToRegistry name gulp-concat
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry http://registry.cnpmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'gulp-concat',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   escapedName: 'gulp-concat',
+35 silly mapToRegistry   name: 'gulp-concat',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri http://registry.cnpmjs.org/gulp-concat
+37 silly fetchNamedPackageData gulp-minify-css
+38 silly mapToRegistry name gulp-minify-css
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry http://registry.cnpmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'gulp-minify-css',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   escapedName: 'gulp-minify-css',
+41 silly mapToRegistry   name: 'gulp-minify-css',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri http://registry.cnpmjs.org/gulp-minify-css
+43 silly fetchNamedPackageData gulp-rename
+44 silly mapToRegistry name gulp-rename
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry http://registry.cnpmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'gulp-rename',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   escapedName: 'gulp-rename',
+47 silly mapToRegistry   name: 'gulp-rename',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri http://registry.cnpmjs.org/gulp-rename
+49 verbose request uri http://registry.cnpmjs.org/gulp
+50 verbose request no auth needed
+51 info attempt registry request try #1 at 06:01:27
+52 verbose request id 4290137350733946
+53 http request GET http://registry.cnpmjs.org/gulp
+54 verbose request uri http://registry.cnpmjs.org/gulp-sass
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 06:01:27
+57 http request GET http://registry.cnpmjs.org/gulp-sass
+58 verbose request uri http://registry.cnpmjs.org/gulp-concat
+59 verbose request no auth needed
+60 info attempt registry request try #1 at 06:01:27
+61 http request GET http://registry.cnpmjs.org/gulp-concat
+62 verbose request uri http://registry.cnpmjs.org/gulp-minify-css
+63 verbose request no auth needed
+64 info attempt registry request try #1 at 06:01:27
+65 http request GET http://registry.cnpmjs.org/gulp-minify-css
+66 verbose request uri http://registry.cnpmjs.org/gulp-rename
+67 verbose request no auth needed
+68 info attempt registry request try #1 at 06:01:27
+69 http request GET http://registry.cnpmjs.org/gulp-rename
+70 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+71 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+72 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+73 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+74 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+75 info attempt registry request try #2 at 06:03:07
+76 http request GET http://registry.cnpmjs.org/gulp
+77 info attempt registry request try #2 at 06:03:07
+78 http request GET http://registry.cnpmjs.org/gulp-rename
+79 info attempt registry request try #2 at 06:03:07
+80 http request GET http://registry.cnpmjs.org/gulp-minify-css
+81 info attempt registry request try #2 at 06:03:07
+82 http request GET http://registry.cnpmjs.org/gulp-concat
+83 info attempt registry request try #2 at 06:03:07
+84 http request GET http://registry.cnpmjs.org/gulp-sass
+85 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+86 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+87 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+88 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+89 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 74.122.238.10:8080
+90 info attempt registry request try #3 at 06:05:37
+91 http request GET http://registry.cnpmjs.org/gulp-sass
+92 info attempt registry request try #3 at 06:05:37
+93 http request GET http://registry.cnpmjs.org/gulp-concat
+94 info attempt registry request try #3 at 06:05:37
+95 http request GET http://registry.cnpmjs.org/gulp-minify-css
+96 info attempt registry request try #3 at 06:05:37
+97 http request GET http://registry.cnpmjs.org/gulp-rename
+98 info attempt registry request try #3 at 06:05:37
+99 http request GET http://registry.cnpmjs.org/gulp
+100 silly fetchPackageMetaData Error: connect ETIMEDOUT 74.122.238.10:8080
+100 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+100 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+100 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+100 silly fetchPackageMetaData  error for gulp-sass@^2.0.4 { Error: connect ETIMEDOUT 74.122.238.10:8080
+100 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+100 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+100 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+100 silly fetchPackageMetaData   code: 'ETIMEDOUT',
+100 silly fetchPackageMetaData   errno: 'ETIMEDOUT',
+100 silly fetchPackageMetaData   syscall: 'connect',
+100 silly fetchPackageMetaData   address: '74.122.238.10',
+100 silly fetchPackageMetaData   port: 8080 }
+101 silly fetchPackageMetaData Error: connect ETIMEDOUT 74.122.238.10:8080
+101 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+101 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+101 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+101 silly fetchPackageMetaData  error for gulp@^3.5.6 { Error: connect ETIMEDOUT 74.122.238.10:8080
+101 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+101 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+101 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+101 silly fetchPackageMetaData   code: 'ETIMEDOUT',
+101 silly fetchPackageMetaData   errno: 'ETIMEDOUT',
+101 silly fetchPackageMetaData   syscall: 'connect',
+101 silly fetchPackageMetaData   address: '74.122.238.10',
+101 silly fetchPackageMetaData   port: 8080 }
+102 silly fetchPackageMetaData Error: connect ETIMEDOUT 74.122.238.10:8080
+102 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+102 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+102 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+102 silly fetchPackageMetaData  error for gulp-rename@^1.2.0 { Error: connect ETIMEDOUT 74.122.238.10:8080
+102 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+102 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+102 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+102 silly fetchPackageMetaData   code: 'ETIMEDOUT',
+102 silly fetchPackageMetaData   errno: 'ETIMEDOUT',
+102 silly fetchPackageMetaData   syscall: 'connect',
+102 silly fetchPackageMetaData   address: '74.122.238.10',
+102 silly fetchPackageMetaData   port: 8080 }
+103 silly fetchPackageMetaData Error: connect ETIMEDOUT 74.122.238.10:8080
+103 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+103 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+103 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+103 silly fetchPackageMetaData  error for gulp-minify-css@^0.3.0 { Error: connect ETIMEDOUT 74.122.238.10:8080
+103 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+103 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+103 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+103 silly fetchPackageMetaData   code: 'ETIMEDOUT',
+103 silly fetchPackageMetaData   errno: 'ETIMEDOUT',
+103 silly fetchPackageMetaData   syscall: 'connect',
+103 silly fetchPackageMetaData   address: '74.122.238.10',
+103 silly fetchPackageMetaData   port: 8080 }
+104 silly fetchPackageMetaData Error: connect ETIMEDOUT 74.122.238.10:8080
+104 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+104 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+104 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+104 silly fetchPackageMetaData  error for gulp-concat@^2.2.0 { Error: connect ETIMEDOUT 74.122.238.10:8080
+104 silly fetchPackageMetaData     at Object.exports._errnoException (util.js:1018:11)
+104 silly fetchPackageMetaData     at exports._exceptionWithHostPort (util.js:1041:20)
+104 silly fetchPackageMetaData     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+104 silly fetchPackageMetaData   code: 'ETIMEDOUT',
+104 silly fetchPackageMetaData   errno: 'ETIMEDOUT',
+104 silly fetchPackageMetaData   syscall: 'connect',
+104 silly fetchPackageMetaData   address: '74.122.238.10',
+104 silly fetchPackageMetaData   port: 8080 }
+105 silly rollbackFailedOptional Starting
+106 silly rollbackFailedOptional Finishing
+107 silly runTopLevelLifecycles Finishing
+108 silly install printInstalled
+109 verbose stack Error: connect ETIMEDOUT 74.122.238.10:8080
+109 verbose stack     at Object.exports._errnoException (util.js:1018:11)
+109 verbose stack     at exports._exceptionWithHostPort (util.js:1041:20)
+109 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1090:14)
+110 verbose cwd /Users/liuyujing/web5-6/Ionic/NO.2/NO.2/app
+111 error Darwin 16.4.0
+112 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+113 error node v6.10.1
+114 error npm  v3.10.10
+115 error code ETIMEDOUT
+116 error errno ETIMEDOUT
+117 error syscall connect
+118 error network connect ETIMEDOUT 74.122.238.10:8080
+119 error network This is most likely not a problem with npm itself
+119 error network and is related to network connectivity.
+119 error network In most cases you are behind a proxy or have bad network settings.
+119 error network
+119 error network If you are behind a proxy, please make sure that the
+119 error network 'proxy' config is set properly.  See: 'npm help config'
+120 verbose exit [ 1, true ]

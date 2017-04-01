@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body,html, #myMap {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GBZ1HjgmZ4tbu6BspoPGGiQYpjRS5rHE"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js"></script>
+</head>
+<body>
+
+<div id="myMap"></div>
+
+
+<script src="PositionControl.js"></script>
+<script>
+
+//    var map = new BMap.Map("myMap");
+//    var point = new BMap.Point(116.404, 39.915);
+//    var point2 = new BMap.Point(116.404, 39.915);
+//    map.centerAndZoom(point,10);
+
+//    console.log(point.equals(point2));
+
+
+    var map = new BMap.Map("myMap",{minZoom:3,maxZoom:15,enableMapClick:false});
+    var points = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(points,15);
+
+//禁用双击放大
+//    map.disableDoubleClickZoom();
+
+//禁用拖拽
+//    map.disableDragging();
+
+    map.addEventListener("click",function (info) {
+
+        console.log(info.point);
+//        panTo()地图上的函数  移动到 指定位置
+        map.panTo(info.point);
+//        设置地图的中心点
+//        map.setCenter(point);
+    });
+
+
+
+    var points = [];
+    map.addEventListener("rightclick",function (info) {
+
+//        右击 设置 地图的  范围
+        if (points.length>=2){
+            points = [];
+        }
+
+        points.push(info.point);
+
+        if (points.length==2){
+//            创建范围的对象
+//            var bounds = new BMap.Bounds(points[0],points[1]);
+//            BMapLib.AreaRestriction.setBounds(map,bounds);
+
+            alert(this.getDistance(points[0],points[1])/1000);
+        }
+    });
+
+
+//    初始化比例尺对象
+    var scaleControl = new BMap.ScaleControl();
+    map.addControl(scaleControl);
+
+
+    var overviewControl = new BMap.OverviewMapControl({isOpen:true});
+    map.addControl(overviewControl);
+
+    map.addEventListener("dragstart",function () {
+        scaleControl.hide();
+    });
+    map.addEventListener("dragend",function () {
+        scaleControl.show();
+    });
+
+
+    var myControl = new PositionControl(map);
+    map.addControl(myControl);
+
+</script>
+
+</body>
+</html>

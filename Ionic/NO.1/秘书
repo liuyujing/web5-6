@@ -1,0 +1,6 @@
+秘书
+	1.数据持久化 -> 保存到本地  -> websql
+	2.定位 地图 -> 百度地图
+	3.webSocket 
+	4.消息推送
+	5.数据库 Node.js/PHP  ->  mysql

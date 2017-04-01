@@ -1,0 +1,19 @@
+
+ul {
+    list-style: none;
+}
+
+.nav li {
+    width: 100px;
+    float: left;
+    background-color: #0d93ff;
+    color: #fdffff;
+    border-right: 1px solid #ced0d0;
+    text-align: center;
+}
+
+.clear:after {
+    content: "";
+    display: block;
+    clear: left;
+}

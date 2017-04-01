@@ -1,0 +1,9 @@
+使用Ionic
+	1.下载node.js
+	2.使用npm i -g cordova ionic 
+	3.切换工程目录 创建ionic的工程 ionic start 工程名 (模板名字 可以不写)
+	4.ionic platform add ios/android 生成iOS/Android的项目 ->可以直接放到xcode/Android studio中去执行
+	5.ionic build ios/android 构建iOS/Android的工程
+	6.ionic run ios/android 执行iOS/Android的工程
+
+	

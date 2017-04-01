@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+
+/*.recoder-icon {*/
+  /*background-image: url("../img/icon.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+/*}*/
+
+/*.recoder-selected-icon {*/
+  /*background-image: url("../img/selected.png");*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
+/*}*/
+
+
+.space-bottom {
+  margin-bottom: 10px;
+}
+
+
+.right-bottom {
+  position: fixed;
+  bottom: 100px;
+  right: 5px;
+  z-index: 999;
+  background-color: #ffc219;
+}
+
+.loc a{
+  float: right;
+  padding-right: 0.5rem;
+}

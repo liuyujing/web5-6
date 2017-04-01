@@ -1,0 +1,59 @@
+离线本地存储（数据持久化）
+	Storage：底下的这两个对象 都是基于Storage这个类去创建的
+		localStorage:只要用户不清缓存  数据一直保存
+		sessionStorage:只保存 进入页面 到 关闭浏览器 的这段时间 
+		使用：
+			1.setItem(key,value)保存数据
+			2.getItem(key)获取数据
+			3.removeItem(key)移除数据
+			4.clear()清除浏览器保存的 所有Storage里面的数据
+			5.key(index) 可以通过下标来找到 对应的key (一般用于遍历Storage里面所有数据的)
+		保存数据的 生命周期不一样
+
+	应用缓存 appcache 可以在断网的情况下  继续访问页面
+		1.创建appcache文件 -> 为缀 是appcache
+		2.引入appcache文件 在文档开始的位置  使用manifest引入
+		3.CACHE MANIFEST 保存需要保存的文件路径
+
+	websql:
+		数据持久化介绍：
+			数据持久化的方式 -> 把需要的数据  保存到 本地 ，使用的时候  直接从本地文文件  获取数据 
+		websql：介绍
+			1.websql 把数据 保存到了 sqlite数据库中
+			2.sqlite:关系型数据库（类似exc）根据sql（sqlite language）语句进行操作  sqlite数据库(增删改查)
+		数据库中的关系：
+			1.数据库：整个文件 一个数据库中 会有多个表
+			2.表:每一张 存储着 某一种功能的数据 每一个表里面 会有多个字段
+			3.字段：类似key(exc中的标题) 每一个字段 对应着 很多条数据（每一行是一条数据）
+		操作数据库的注意事项：
+			1.每一次操作数据库  都需要 清除一下数据库的内容（特别是在 操作表的时候（添加删除字段））
+			2.每一次使用sql语句 都需要 先去验证一遍 （因为没有报错提示）
+
+		openDatabase:打开数据库
+		transaction（类似context） 根据数据库对象 创建事务 在事务中进行sql的操作
+
+		executeSql():操作sql语句的方法
+			CREATE TABLE tally ('name','des','price');
+			INSERT INTO tally ('name','des','price') VALUES (?,?,?)
+			UPDATE tally SET price='"+content.price+"',des='"+content.des+"' WHERE name='"+content.name+"'"
+			SELECT * FROM tally WHERE name=?
+			SELECT * FROM tally
+			DELETE FROM tally WHERE name='"+name+"'
+	
+	indexedDB:https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
+		1.打开数据库并且开始一个事务。
+		2.创建一个 object store。 这步才会真正的创建一个数据库 并创建一个表
+		3.构建一个请求来执行一些数据库操作，像增加或提取数据等。
+		4.通过监听正确类型的 DOM 事件以等待操作完成。
+		5.在操作结果上进行一些操作（可以在 request 对象中找到）
+		indexedDB:IDBFactory 它是数据库的一个统一操作对象
+		可通过它 打开数据库open 会得到一个请求 可通过检测请求的对象 来做其他操作（不是open了就会打开数据库）
+			onerror
+			onsuccess
+			onupgradeneeded 只有当数据库版本更改的时候 才回去调用
+
+作业：
+	1.添加保存登录状态
+	2.离线版记账本
+		日期 名字 描述  价格 斤数 
+		增删改查->操作之后  在界面同时显示结果

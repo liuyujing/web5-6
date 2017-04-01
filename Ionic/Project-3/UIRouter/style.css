@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.tabs {
+    position: fixed;
+    bottom: 0;
+    height: 44px;
+    width: 100%;
+    background-color: #ffc219;
+    color: #fdffff;
+}
+
+.item {
+    width: 33%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    float: left;
+}

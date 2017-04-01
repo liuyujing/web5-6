@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+    var db = openDatabase("myDB","1.0","myDB",5*1024*1024,function (result) {
+        console.log("创建数据库成功",result);
+    });
+
+    db.transaction(function (ts) {
+        ts.executeSql("CREATE TABLE user ('name' unique,'age')",[],function (e) {
+            console.log("success",e);
+        },function (error) {
+            console.log("error",error);
+        });
+    });
+
+    db.transaction(function (ts) {
+        ts.executeSql("INSERT INTO user ('name','age') VALUES ('ww',20)",[],function () {
+          console.log("success");
+        });
+    });
+    db.transaction(function (ts) {
+       ts.executeSql("UPDATE user SET name='ee' WHERE name='ww'");
+    });
+//    db.transaction(function (ts) {
+//       ts.executeSql("DELETE FROM user WHERE name='ee'");
+//    });
+    db.transaction(function (ts) {
+       ts.executeSql("SELECT * FROM user",[],function (ts,result) {
+           console.log(result);
+       });
+    });
+</script>
+</body>
+</html>

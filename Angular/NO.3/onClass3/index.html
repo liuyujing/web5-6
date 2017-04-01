@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="public/main.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+</head>
+<body>
+
+
+<ul class="nav clear">
+    <li ui-sref="home">首页</li>
+    <li ui-sref="find">发现</li>
+    <li ui-sref="setting">设置</li>
+</ul>
+
+<ui-view></ui-view>
+
+<script src="public/routes.js"></script>
+<script src="public/app.js"></script>
+</body>
+</html>

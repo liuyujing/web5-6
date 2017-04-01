@@ -1,0 +1,95 @@
+
+websql:
+	数据持久化介绍：
+		数据持久化的方式 -> 把需要的数据  保存到 本地 ，使用的时候  直接从本地文文件  获取数据 
+	websql：介绍
+		1.websql 把数据 保存到了 sqlite数据库中
+		2.sqlite:关系型数据库（类似exc）根据sql（sqlite language）语句进行操作  sqlite数据库(增删改查)
+	数据库中的关系：
+		1.数据库：整个文件 一个数据库中 会有多个表
+		2.表:每一张 存储着 某一种功能的数据 每一个表里面 会有多个字段
+		3.字段：类似key(exc中的标题) 每一个字段 对应着 很多条数据（每一行是一条数据）
+	操作数据库的注意事项：
+		1.每一次操作数据库  都需要 清除一下数据库的内容（特别是在 操作表的时候（添加删除字段））
+		2.每一次使用sql语句 都需要 先去验证一遍 （因为没有报错提示）
+
+
+
+	1. openDatabase():打开数据库 -> 数据库的对象
+	2. 通过数据库的对象 调用 transaction（）会通过回调函数 得到一个事务上下文的对象  所有操作都是通过它 进行sql的操作
+	3. executeSql():操作sql语句的方法 建表、添加、删除、更新查找 ->sql语句不同
+
+	常用sql语句
+		建表：CREATE TABLE 表名 ('字段名','字段名','字段名');
+		插入数据：INSERT INTO 表名 ('字段名','字段名','字段名') VALUES (?,?,?)
+		更新数据：UPDATE 表名 SET price='新值' WHERE name='旧值"
+		查询：SELECT * FROM 表名 WHERE name=?
+		查询：SELECT * FROM 表名
+		删除：DELETE FROM 表名 WHERE name='"+name+"'
+
+	webSQL的操作流程 ✭✭✭✭✭
+		1.通过openDatabase()创建数据库 -> 得到数据库对象
+			例如：
+				var db = openDatabase("数据库的名字",版本,"显示的名字",容量,操作完成的回调函数);
+		2.建表 
+			> 通过数据库对象 调用transaction() 会通过transaction里面的回调函数  得到一个操作数据库的对象
+				例如：
+					db.transation(function(transationObj){
+						建表的sql语句 = CREATE TABLE 表名 ('字段名','字段名',...);
+						transationObj.executeSql(建表的sql语句);
+					})
+		3.添加数据
+			例如：
+				db.transation(function(transationObj){
+					添加数据的sql语句 = INSERT INTO 表名 ('字段名','字段名',...) VALUES('值','值');
+					transationObj.executeSql(建表的sql语句);
+				})
+		4.更新数据
+			例如：
+				db.transation(function(transationObj){
+					更新数据的sql语句 = UPDATE 表名 SET 字段名='新值' where 字段名='旧值';
+					transationObj.executeSql(建表的sql语句);
+				})
+		5.删除数据
+			例如：
+				db.transation(function(transationObj){
+					删除数据的sql语句 = DELETE FROM 表名  where 字段名='值';
+					transationObj.executeSql(建表的sql语句);
+				})
+		6.查询数据
+			例如：
+				db.transation(function(transationObj){
+					查询数据的sql语句 = SELECT  * FROM 表名  where 字段名='值';
+					transationObj.executeSql(建表的sql语句,查询的内容数组,function (transaction,result){
+						结果在result中 可以通过.rows
+					});
+				})
+
+
+	this.db.transaction(function (ts) {
+        ts.executeSql(sql,values);
+    });
+	this.db.transaction(function (ts) {
+        ts.executeSql(sql,[],function (transaction,result) {
+            if (callback) {
+                callback(result.rows);
+            }
+        });
+    });
+
+
+
+
+
+
+indexedDB:https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
+	1.打开数据库并且开始一个事务。
+	2.创建一个 object store。 这步才会真正的创建一个数据库 并创建一个表
+	3.构建一个请求来执行一些数据库操作，像增加或提取数据等。
+	4.通过监听正确类型的 DOM 事件以等待操作完成。
+	5.在操作结果上进行一些操作（可以在 request 对象中找到）
+	indexedDB:IDBFactory 它是数据库的一个统一操作对象
+	可通过它 打开数据库open 会得到一个请求 可通过检测请求的对象 来做其他操作（不是open了就会打开数据库）
+		onerror
+		onsuccess
+		onupgradeneeded 只有当数据库版本更改的时候 才回去调用

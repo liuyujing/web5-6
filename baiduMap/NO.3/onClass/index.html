@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        html,body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 700px;
+        }
+    </style>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GBZ1HjgmZ4tbu6BspoPGGiQYpjRS5rHE"></script>
+</head>
+<body>
+
+<div id="map"></div>
+
+起始点:<input tynpe="text" id="startPoint">
+<br>
+结束点:<input type="text" id="endPoint">
+<br>
+<button id="search">搜索</button>
+
+<div id="resultContainer"></div>
+
+<script src="main.js"></script>
+</body>
+</html>

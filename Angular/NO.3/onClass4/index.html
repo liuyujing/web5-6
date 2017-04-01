@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="bower_components/angular/angular.js"></script>
+</head>
+<body ng-controller="homeController">
+
+<ucai></ucai>
+
+<!--希望 通过 content 这个属性 指定显示内容的变量 在web标签中显示内容 -->
+<web content="{{name}}"></web>
+
+<!--定义 自定义 标签的 事件-->
+<vv active="showInfo()" content="{{name}}"></vv>
+
+<script src="app.js"></script>
+</body>
+</html>

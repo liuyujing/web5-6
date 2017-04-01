@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+</head>
+<body>
+
+<!--用于显示 路由中 每一个页面的 -->
+<ui-view></ui-view>
+
+<ul>
+    <!--ui-sref 用于指定显示的路由状态-->
+    <li ui-sref="home">首页</li>
+    <li ui-sref="find">发现</li>
+    <li ui-sref="setting">设置</li>
+</ul>
+
+<script src="js/app.js"></script>
+</body>
+</html>

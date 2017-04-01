@@ -1,0 +1,53 @@
+
+<ion-view title="新建">
+
+  <ion-nav-buttons side="right">
+    <button class="button icon ion-share button-clear"></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+    <ion-list>
+
+      <ion-item class="item item-input space-bottom">
+        <input type="text" placeholder="标题" ng-model="writeInfo.title">
+      </ion-item>
+
+      <ion-item class="item item-input space-bottom">
+        <textarea placeholder="内容" ng-model="writeInfo.des"></textarea>
+      </ion-item>
+
+      <ion-item class="item item-button-right">
+        提醒时间
+        <span ng-bind="writeInfo.alertTime"></span>
+        <button class="button button-clear button-energized icon ion-ios-stopwatch-outline" ng-click="addEvent(0)"></button>
+      </ion-item>
+
+
+      <ion-item class="item-button-right space-bottom">
+        <span ng-bind="writeInfo.status.message"></span>
+        <button class="button button-clear button-energized  icon ion-android-radio-button-on assertive" ng-click="addEvent(1)"></button>
+      </ion-item>
+
+
+      <ion-item class="item-toggle space-bottom">
+        <span ng-bind="writeInfo.public.message"></span>
+        <label class="toggle toggle-energized">
+          <input type="checkbox" ng-model="writeInfo.public.isPublic" ng-change="addEvent(3)">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </ion-item>
+
+      <ion-item class="item-button-right space-bottom">
+        <span ng-bind="writeInfo.location.address||'定位'"></span>
+        <button class="button button-clear button-energized  icon ion-android-radio-button-on assertive" ng-click="addEvent(2)"></button>
+      </ion-item>
+
+    </ion-list>
+
+    <button class="button button-balanced button-block" ng-click="toSave(writeInfo)">保存</button>
+
+  </ion-content>
+</ion-view>

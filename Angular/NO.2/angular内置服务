@@ -8,6 +8,7 @@ angular内置服务
 		> 注入ngRoute模块
 		> 配置应用程序的路由（config()）：函数
 			$routeProvider
+			$locationProcider
 		> 配置每一个路由
 			$routeProvider.when()
 				> 路径 路由分支的路径
@@ -18,3 +19,32 @@ angular内置服务
 				所有条件都不满足 就会执行默认的这个条件
 
 	2.第三方的路由 ui-router
+		特点
+			通过状态（state）定义页面的位置
+			可以实现多级路由的嵌套
+		步骤
+			1.引入angular.js uirouter.js文件
+			2.创建入口模块 并注入ui.router
+				备注
+					> 切换路由 使用 ui-sref="状态的名字"
+					> 显示视图 使用 ui-view
+			3.配置每一个路由
+				$stateProvider.state()	
+					> "状态的名字" 切换路由的时候 是根据这个状态去切换的
+					> object 每条路由的详细信息
+						url:"在地址栏中显示的路径",
+						template/templateUrl:"模板或者模板（视图）的路径"
+						controller:"模板（视图）对应的控制器"
+					> 子页面
+						同一个父视图中的 子视图视图名字 必须一样
+						state、url...是不一样的
+					{
+						views:{
+							"视图的名字":{
+								}
+							}
+					}
+				$urlRouterProvider.otherwise("状态的字符串")
+
+
+
