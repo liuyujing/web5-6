@@ -1,0 +1,21 @@
+IndexedDB介绍：
+	是一款浏览器端的数据库  nosql类型的数据库 直接操纵对象。 不像websql，是通过sql语句进行操作数据库。
+	IndexedDB 也是通过事物上下文（transation）进行操作,每一个操作都会得到一个请求对象,可以通过请求对象 得到 操作之后的结果
+
+打开数据库：	
+	1.打开数据库open
+		var request = indexedDB.open(name,version)
+		request.onsuccess = function (event) {this.db = event.target.result;}
+			onsuccess
+			onerror
+			onupgradeneeded
+	2.建表
+		var os = db.createObjectStore("user", {keyPath: "name"}) 类似于websql中 建表的方法
+		os.createIndex("name", "name", {unique: true}); 类似于 websql中 添加字段
+	3.添加数据
+		var transaction = this.db.transaction(["user"],"readwrite");
+		var objectStore =  transaction.objectStore("user");
+        var request = objectStore.add(data);
+    4.修改put
+    5.删除delete
+    6.查询getAll get

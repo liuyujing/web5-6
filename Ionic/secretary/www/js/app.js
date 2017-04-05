@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic','ngCordova', 'starter.controllers', 'starter.services'])
 
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -30,7 +30,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url:"/recorders",
       views:{
         "tab-recorders":{
-          templateUrl:"templates/recorders.html"
+          templateUrl:"templates/recorders.html",
+          controller:"homeController"
         }
       }
     });
