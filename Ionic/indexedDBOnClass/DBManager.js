@@ -87,6 +87,72 @@
         };
     };
 
+    //
+    // DBManager.prototype.add = function (osName,par) {
+    //     this.tool(osName,par,add).then().catch();
+    // };
+    //
+    // DBManager.prototype.update = function (osName,par) {
+    //     this.tool(osName,par,put).then().catch();
+    // };
+    //
+    //
+    // DBManager.prototype.tool = function (osName,par,funName) {
+    //     return new Promise(function (res,rej) {
+    //         var os = this.db.transaction(osName,"readwrite").objectStore(osName);
+    //         var request = os.funName(par);
+    //         request.onerror = function (event) {
+    //             console.log(event);
+    //             rej(event);
+    //         };
+    //         request.onsuccess = function (event) {
+    //             res(request.result);
+    //             console.log(event);
+    //         };
+    //     });
+    // };
+
+
+    //修改数据
+    DBManager.prototype.updateObject = function (osName,object) {
+        var os = this.db.transaction(osName,"readwrite").objectStore(osName);
+        var request = os.put(object);
+        request.onerror = function (event) {
+            console.log(event);
+        };
+        request.onsuccess = function (event) {
+            console.log(event);
+        };
+    };
+
+    DBManager.prototype.searchObject = function (osName,searchMessage,callback) {
+
+        var os = this.db.transaction(osName,"readonly").objectStore(osName);
+
+        var request = os.get(searchMessage);
+
+        request.onerror = function (event) {
+            console.log(event);
+        };
+        request.onsuccess = function (event) {
+            console.log(event.target.result);
+            callback(event.target.result);
+        };
+
+    };
+    
+    DBManager.prototype.deleteObject = function (osName,deleteMessage) {
+        var os = this.db.transaction(osName,"readwrite").objectStore(osName);
+        var request = os.delete(deleteMessage);
+        request.onerror = function (event) {
+          console.log(event);
+        };
+        request.onsuccess = function (event) {
+            console.log(event);
+        };
+    };
+
+
     window.DBManager = DBManager;
 
 })();
@@ -128,3 +194,25 @@
 
 // var ts = db.transaction(["user"],"readwrite");
 // ts.add({name:"小明",phone:"1111",age:20});
+
+// var request = indexedDB.open("dbName",1);
+// request.onsuccess = function (event) {
+//     // this.result
+//     var db = event.target.result;
+// };
+//
+// request.onupgradeneeded = function () {
+// //    建表
+//     var os = this.result.createObjectStore("osName",{});
+//     os.createIndex("索引名","键路径",{});
+//     os.createIndex("索引名","键路径",{});
+//     os.createIndex("索引名","键路径",{});
+// };
+//
+// var ts = db.transaction("osName");
+// var os = ts.objectStore("osName");
+// os.add({});
+
+
+//作业：把项目中 websql里面的内容 修改成  indexedDB
+//indexedDB操作  封装成工具类 并且使用 promise
