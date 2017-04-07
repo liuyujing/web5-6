@@ -14,7 +14,7 @@ angular.module("starter.controllers",[])
 
   })
 
-  .controller("recoderController",function($scope,DBManager,$ionicLoading){
+  .controller("recoderController",function($scope,DBManager,$ionicLoading,$http){
     $scope.recoders = [];
 
     $ionicLoading.show({
@@ -34,6 +34,20 @@ angular.module("starter.controllers",[])
       $ionicLoading.hide();
     });
 
+    $scope.rrrr = function () {
+
+
+    $http({
+      mrthod:"post",
+      url:"http://localhost:3000/users/register",
+      data:{message:"1111"},
+
+    }).success(function (res) {
+      console.log(res);
+    }).error(function (error) {
+      console.log(error);
+    });
+    }
   })
 //  录入数据页面控制器
 .controller("RecoderWriteController",function ($scope,writeService,$ionicActionSheet,$ionicPopup,DBManager) {
