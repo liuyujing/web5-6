@@ -38,12 +38,12 @@ router.get("/verifyCode",function (req,res) {
     //配置 短信验证的内容
     //详情请看：https://www.npmjs.com/package/alidayu-node
     var info = {
-        sms_free_sign_name:'注册验证',
+        sms_free_sign_name:'我的小秘书',
         sms_param:{
-          code:"123456",
+          code:verifyCode,
           product:"秘书"},
         rec_num:req.query.phone,
-        sms_template_code:'SMS_640004'
+        sms_template_code:'SMS_60420032'
     };
 
     //发送验证码 到手机

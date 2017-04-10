@@ -17,6 +17,14 @@ angular.module("starter.controllers",[])
   //首页的控制器
   .controller("recoderController",function ($scope,DBManager,$ionicLoading,$timeout,timeTool,$ionicListDelegate,$rootScope) {
 
+    $scope.scheduleSingleNotification = function () {
+      cordova.plugins.notification.local.schedule({
+        id: 1,
+        title: "应用提醒",
+      text: "应用有新消息，快来查看吧",
+      at: new Date(new Date().getTime() + 30 * 1000)
+    });
+    };
     function loadData() {
 
       //等待视图
@@ -298,5 +306,7 @@ angular.module("starter.controllers",[])
   $scope.gotoRegister = function () {
     HTTPManager.post(HOST+REGISTER,{name:"xiaoming"});
   };
+
+
 
 });
