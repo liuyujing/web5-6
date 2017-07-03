@@ -1,0 +1,9 @@
+{
+  "name": "js-sha1",
+  "version": "0.4.1",
+  "main": ["src/sha1.js"],
+  "ignore": [
+    "samples",
+    "tests"
+  ]
+}

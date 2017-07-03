@@ -1,0 +1,14 @@
+{
+  "name": "webpack",
+  "version": "0.0.1",
+  "description": "小秘书...",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liuyujing",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.4.1"
+  }
+}

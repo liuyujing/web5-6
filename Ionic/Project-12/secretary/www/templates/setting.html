@@ -1,0 +1,25 @@
+
+<ion-view>
+  <ion-content>
+
+
+    <ion-list>
+
+      <ion-item>
+
+        <!--判断是否登录 可以通过 本地保存一个 登录的状态 去区分-->
+        <h3 ng-show="isLogin" ng-bind="username"></h3>
+        <button ng-hide="isLogin" ui-sref="tabs.login">未登录</button>
+      </ion-item>
+
+      <ion-item class="item-divider"></ion-item>
+
+      <ion-item>公开/私密记录</ion-item>
+      <ion-item ui-sref="tabs.trash">删除记录的垃圾箱</ion-item>
+
+
+    </ion-list>
+
+
+  </ion-content>
+</ion-view>

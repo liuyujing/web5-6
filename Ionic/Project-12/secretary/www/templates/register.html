@@ -1,0 +1,24 @@
+
+<ion-view view-title="注册">
+  <ion-content>
+
+    <ion-list>
+      <ion-item class="item item-input-inset">
+        <input type="text" placeholder="用户名" ng-model="registerInfo.username">
+      </ion-item>
+      <ion-item class="item item-input-inset">
+        <input type="text" placeholder="手机号" ng-model="registerInfo.phone">
+      </ion-item>
+      <ion-item class="item item-input-inset item-button-right">
+        <input type="text" placeholder="输入验证码" ng-model="registerInfo.verifyCode">
+        <button class="button button-energized" ng-click="getVerfilyCode()" ng-bind="codeStatus" ng-disabled="codeStatusIsDisable || !(registerInfo.phone)"></button>
+      </ion-item>
+      <ion-item class="item item-input-inset">
+        <input type="password" placeholder="登录密码" ng-model="registerInfo.password">
+      </ion-item>
+    </ion-list>
+
+    <button class="button button-energized button-full" ng-click="toRegister(registerInfo)" ng-disabled="!(registerInfo.username && registerInfo.phone && registerInfo.verifyCode && registerInfo.password)">注册</button>
+
+  </ion-content>
+</ion-view>

@@ -321,7 +321,7 @@ angular.module("starter.controllers",[])
 
   })
 
-  .controller("registerController",function ($scope,$interval,HTTPManager,$ionicLoading,$timeout) {
+  .controller("registerController",function ($scope,$interval,HTTPManager,$ionicLoading,$timeout,$ionicHistory) {
 
     $scope.registerInfo = {};
 
@@ -368,10 +368,15 @@ angular.module("starter.controllers",[])
 
     };
 
-
     $scope.toRegister = function (info) {
 
       console.log(info);
+      HTTPManager.post(HOST+REGISTER,$scope.registerInfo).then(function (result) {
+        console.log(result);
 
+        $ionicHistory.goBack();
+      }).catch(function (error) {
+        console.log(error);
+      });
     };
   });

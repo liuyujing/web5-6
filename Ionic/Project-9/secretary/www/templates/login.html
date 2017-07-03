@@ -1,0 +1,22 @@
+
+<ion-view view-title="登录">
+  <ion-content>
+
+    <ion-list>
+      <ion-item class="item item-input-inset">
+        <input type="text" placeholder="手机号" ng-model="userInfo.phone">
+      </ion-item>
+
+      <ion-item class="item item-input-inset">
+        <input type="password" placeholder="登录密码" ng-model="userInfo.password">
+      </ion-item>
+
+    </ion-list>
+
+    <button class="button button-energized button-full" ng-disabled="!(userInfo.phone && userInfo.password)" ng-click="toLogin()">登录</button>
+    <div class="row">
+      <button class="col-50 button button-dark button-clear" ui-sref="tabs.register">快速注册</button>
+      <button class="col-50 button button-dark button-clear">忘记密码</button>
+    </div>
+  </ion-content>
+</ion-view>

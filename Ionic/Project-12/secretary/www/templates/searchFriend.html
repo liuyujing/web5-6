@@ -1,0 +1,24 @@
+
+<ion-view view-title="查找好友">
+
+  <div class="bar bar-subheader item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="查询好友" ng-model="searchMessage" ng-change="searchFriend()">
+    </label>
+    <button class="button button-dark button-clear" ng-click="searchFriend()">
+      查询
+    </button>
+  </div>
+
+  <ion-content class="has-subheader">
+
+    <ion-list>
+      <ion-item ng-repeat="info in friends" ng-click="showSendView(info)">
+        <p ng-bind="info.username"></p>
+        <p ng-bind="info.phone"></p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
